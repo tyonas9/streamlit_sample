@@ -18,10 +18,10 @@ with dataset:
     st.text('I found this dataset at... I decided to work with it because ...')
 
     
-    taxi_data = pd.read_csv('data/taxi_data.csv') 
+    taxi_data = pd.read_csv('data/train-store.csv') 
     st.write(taxi_data.head())
 
-    pulocation_dist = pd.DataFrame(taxi_data['trip_distance'].value_counts())
+    pulocation_dist = pd.DataFrame(taxi_data['Dept'].value_counts())
     st.bar_chart(pulocation_dist)
     
 
